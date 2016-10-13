@@ -1,0 +1,27 @@
+<%- contentFor('hero') %>
+<!-- Main component for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <h1>About Us</h1>
+  <p>Volutpat rutrum montes nisl metus potenti. Vivamus. Rhoncus pede purus mauris auctor placerat dictum orci interdum nibh vel facilisis ad. Lorem congue lorem. Penatibus, diam nostra quis sociosqu. Pretium lectus lorem. Mollis. Purus. Enim enim pede suspendisse dui tellus ultrices.</p>
+  <p>
+    <a class="btn btn-lg btn-primary" href="/about" role="button">Learn More &raquo;</a>
+  </p>
+</div>
+
+<%- contentFor('body') %>
+<div class="about">
+	<h2>Team</h2>
+	<hr/>
+	<div class="row">
+		<% for (user of team ){ %>
+			<div class="col-lg-3">
+			<img src="<%= user.img %>">
+				<h3><%= user.name %></h3>
+				<ul class="list-unstyled">
+					<li><%= user.email %></li>
+					<li><%= user.site %></li>
+				</ul>
+			</div>
+		<% } %>
+	</div>
+</div>
